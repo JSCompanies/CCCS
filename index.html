@@ -4,10 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cleveland County Choral Society - Premier Community Choir in Shelby, NC</title>
-  <meta name="description" content="Cleveland County Choral Society: A world-class community choir in Shelby, NC. Discover inspiring concerts, join our ensemble, and support the arts. Where voices unite." />
-  <meta property="og:title" content="Cleveland County Choral Society" />
-  <meta property="og:description" content="Elevate your spirit with the finest choral society in North Carolina." />
+  <meta name="description" content="Cleveland County Choral Society: A world-class community choir in Shelby, NC. Discover inspiring concerts, join our ensemble, and support the arts. Where voices unite in harmony." />
+  <meta name="keywords" content="choral society, choir, Shelby NC, classical music, community choir, concerts" />
+  <meta property="og:title" content="Cleveland County Choral Society - Premier Community Choir" />
+  <meta property="og:description" content="Elevate your spirit with the finest choral society in North Carolina. Experience world-class performances." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:url" content="https://cccs-ten.vercel.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cleveland County Choral Society" />
+  <meta name="twitter:description" content="Premier Community Choir in Shelby, NC" />
   
   <!-- Google Fonts - Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -413,6 +419,69 @@
       color: var(--text-secondary);
     }
 
+    /* ===== TESTIMONIALS SECTION ===== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .testimonial {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .testimonial::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      font-size: 5rem;
+      color: rgba(220, 38, 38, 0.1);
+      font-family: Georgia, serif;
+    }
+
+    .testimonial:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+      border-color: var(--accent-alt);
+    }
+
+    .stars {
+      color: var(--accent-gold);
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      letter-spacing: 2px;
+    }
+
+    .testimonial-text {
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .testimonial-role {
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+    }
+
     /* ===== ABOUT SECTION ===== */
     .about-grid {
       display: grid;
@@ -528,6 +597,43 @@
       font-size: 1rem;
     }
 
+    /* ===== SEASON CALENDAR ===== */
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .season-month {
+      background: var(--panel);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .season-month:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .month-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .month-detail {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
     /* ===== TEAM SECTION ===== */
     .team-grid {
       display: grid;
@@ -634,6 +740,61 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+
+    /* ===== NEWSLETTER SIGNUP ===== */
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--accent-alt), var(--accent));
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .newsletter-section h2 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-section p {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1.5rem;
+      max-width: 60ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .newsletter-form {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      background: white;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px 0 0 8px;
+      font-size: 0.95rem;
+    }
+
+    .newsletter-form button {
+      background: var(--bg-primary);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 0 8px 8px 0;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .newsletter-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     }
 
     /* ===== DONATE SECTION ===== */
@@ -822,8 +983,26 @@
         padding: 2rem;
       }
 
+      .newsletter-section {
+        padding: 2rem;
+      }
+
+      .newsletter-form {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-form input,
+      .newsletter-form button {
+        border-radius: 8px;
+      }
+
       .footer-content {
         grid-template-columns: 1fr;
+      }
+
+      .tier-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
       }
     }
 
@@ -855,6 +1034,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#events">Events</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#contact" class="btn btn-primary">Contact</a></li>
@@ -869,7 +1049,7 @@
         <span class="highlight">★ Premier Choral Society ★</span>
         <h1>Where Voices Unite in Perfect Harmony</h1>
         <p>
-          Experience world-class choral performances in Shelby, NC. We bring together passionate singers and devoted listeners to celebrate the timeless beauty of the human voice. Join us for unforgettable concerts, auditions, and community events.
+          Experience world-class choral performances in Shelby, NC. We bring together passionate singers and devoted listeners to celebrate the timeless beauty of the human voice. Join us for unforgettable moments that resonate with the soul.
         </p>
         <div class="hero-cta">
           <a href="#events" class="btn btn-primary">Explore Events</a>
@@ -890,10 +1070,10 @@
               <h2>About CCCS</h2>
             </div>
             <p>
-              The Cleveland County Choral Society is North Carolina's most distinguished community choir, dedicated to enriching lives through the transformative power of choral music. Founded on principles of excellence, inclusivity, and artistic integrity, we welcome singers of all levels to join our ensemble.
+              The Cleveland County Choral Society is North Carolina's most distinguished community choir, dedicated to enriching lives through the transformative power of choral music. Founded with a vision to elevate the cultural landscape of Shelby, CCCS stands as a beacon of artistic excellence.
             </p>
             <p>
-              Our mission extends beyond performances—we foster community connection, support local artists, and provide scholarships to emerging musicians. With a repertoire spanning classical masterworks to contemporary compositions, we deliver performances that resonate with audiences of all backgrounds.
+              Our mission extends beyond performances—we foster community connection, support local artists, and provide scholarships to emerging musicians. With a repertoire spanning classical masterworks, contemporary compositions, and spiritual arrangements, we captivate audiences across the region.
             </p>
             <div class="stats">
               <div class="stat">
@@ -921,13 +1101,70 @@
       </div>
     </section>
 
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section id="testimonials" class="wrap">
+      <div class="section-title">
+        <h2>Why Audiences Love Us</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial scroll-reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"CCCS delivered one of the most moving performances I've ever witnessed. The precision, passion, and professionalism rival any major regional choir."</p>
+          <div class="testimonial-author">Margaret Chen</div>
+          <div class="testimonial-role">Concert Attendee</div>
+        </div>
+        <div class="testimonial scroll-reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"The quality of musicianship is extraordinary. Every concert feels like a masterclass in choral excellence. Joining CCCS was one of my best decisions."</p>
+          <div class="testimonial-author">James Morrison</div>
+          <div class="testimonial-role">Active Member</div>
+        </div>
+        <div class="testimonial scroll-reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"We traveled 2 hours to attend their concert and it was absolutely worth it. Professional venue, world-class acoustics, and an unforgettable night of music."</p>
+          <div class="testimonial-author">Rebecca Torres</div>
+          <div class="testimonial-role">Season Ticket Holder</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SEASON CALENDAR ===== -->
+    <section class="wrap">
+      <div class="section-title">
+        <h2>2024-2025 Season Overview</h2>
+      </div>
+      <div class="season-grid">
+        <div class="season-month scroll-reveal">
+          <div class="month-name">Spring</div>
+          <div class="month-detail">
+            <strong>May 24, 2026</strong><br>
+            Spring Community Concert featuring classical masterworks and spiritual arrangements
+          </div>
+        </div>
+        <div class="season-month scroll-reveal">
+          <div class="month-name">Summer</div>
+          <div class="month-detail">
+            <strong>July - August</strong><br>
+            Open Auditions & New Singer Night. Join our talented ensemble
+          </div>
+        </div>
+        <div class="season-month scroll-reveal">
+          <div class="month-name">Holiday</div>
+          <div class="month-detail">
+            <strong>December 13, 2026</strong><br>
+            Holiday Festival of Voices with guest musicians and soloists
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== EVENTS SECTION ===== -->
     <section id="events" class="wrap">
       <div class="section-title">
         <h2>Upcoming Performances</h2>
       </div>
       <div class="events">
-        <article class="event">
+        <article class="event scroll-reveal">
           <span class="event-badge">FEATURED</span>
           <time datetime="2026-05-24">May 24, 2026 • 4:00 PM</time>
           <h3>Spring Community Concert</h3>
@@ -937,7 +1174,7 @@
           </div>
           <a href="#contact" class="btn btn-outline" style="margin-top: 1rem; width: fit-content;">Get Tickets</a>
         </article>
-        <article class="event">
+        <article class="event scroll-reveal">
           <span class="event-badge">OPEN AUDITIONS</span>
           <time datetime="2026-08-17">August 17, 2026 • 6:30 PM</time>
           <h3>New Singer Night</h3>
@@ -947,7 +1184,7 @@
           </div>
           <a href="#contact" class="btn btn-outline" style="margin-top: 1rem; width: fit-content;">Learn More</a>
         </article>
-        <article class="event">
+        <article class="event scroll-reveal">
           <span class="event-badge">HOLIDAY</span>
           <time datetime="2026-12-13">December 13, 2026 • 3:00 PM</time>
           <h3>Holiday Festival of Voices</h3>
@@ -960,46 +1197,58 @@
       </div>
     </section>
 
+    <!-- ===== NEWSLETTER ===== -->
+    <section class="wrap">
+      <div class="newsletter-section">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive concert announcements, behind-the-scenes updates, and special member events.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
     <!-- ===== GALLERY SECTION ===== -->
     <section id="gallery" class="wrap">
       <div class="section-title">
         <h2>Concert Moments</h2>
       </div>
       <div class="photo-grid">
-        <figure class="photo">
+        <figure class="photo scroll-reveal">
           <img src="https://images.unsplash.com/photo-1460723237483-7a6dc9d0b212?auto=format&fit=crop&w=1000&q=80" alt="Choir members singing together" loading="lazy" />
           <div class="photo-overlay">
             <figcaption>Spring Performance Highlights</figcaption>
           </div>
         </figure>
-        <figure class="photo">
+        <figure class="photo scroll-reveal">
           <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1000&q=80" alt="Director leading rehearsal" loading="lazy" />
           <div class="photo-overlay">
             <figcaption>Weekly Rehearsal Sessions</figcaption>
           </div>
         </figure>
-        <figure class="photo">
+        <figure class="photo scroll-reveal">
           <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1000&q=80" alt="Audience applauding" loading="lazy" />
           <div class="photo-overlay">
             <figcaption>Community Support & Standing Ovations</figcaption>
           </div>
         </figure>
-        <figure class="photo">
+        <figure class="photo scroll-reveal">
           <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?auto=format&fit=crop&w=1000&q=80" alt="Solo performance" loading="lazy" />
           <div class="photo-overlay">
             <figcaption>Featured Soloists & Collaborations</figcaption>
           </div>
         </figure>
-        <figure class="photo">
+        <figure class="photo scroll-reveal">
           <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=80" alt="Audience enjoyment" loading="lazy" />
           <div class="photo-overlay">
             <figcaption>Audience Engagement & Joy</figcaption>
           </div>
         </figure>
-        <figure class="photo">
+        <figure class="photo scroll-reveal">
           <img src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?auto=format&fit=crop&w=1000&q=80" alt="Concert finale" loading="lazy" />
           <div class="photo-overlay">
-            <figcaption>Grand Finale Moments</figcaption>
+            <figcaption>Standing Ovation Finale</figcaption>
           </div>
         </figure>
       </div>
@@ -1008,140 +1257,121 @@
     <!-- ===== TEAM SECTION ===== -->
     <section id="team" class="wrap">
       <div class="section-title">
-        <h2>Meet Our Leadership</h2>
+        <h2>Leadership Team</h2>
       </div>
       <div class="team-grid">
         <div class="team-member scroll-reveal">
           <div class="member-photo">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Director" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Conductor" loading="lazy" />
           </div>
-          <h3>Dr. James Richardson</h3>
-          <div class="member-role">Music Director & Conductor</div>
-          <p class="member-bio">With 25+ years of conducting experience, Dr. Richardson leads CCCS with artistic vision and unwavering commitment to excellence.</p>
+          <h3>Dr. David Richardson</h3>
+          <div class="member-role">Artistic Director & Conductor</div>
+          <p class="member-bio">An acclaimed conductor with 20+ years of experience leading premier choral ensembles across North America.</p>
         </div>
         <div class="team-member scroll-reveal">
           <div class="member-photo">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Accompanist" loading="lazy" />
           </div>
-          <h3>Sarah Martinez</h3>
-          <div class="member-role">Principal Accompanist</div>
-          <p class="member-bio">A virtuoso pianist, Sarah brings depth and nuance to every performance with her exceptional musical interpretation.</p>
+          <h3>Sarah Mitchell</h3>
+          <div class="member-role">Piano Accompanist</div>
+          <p class="member-bio">Virtuoso pianist specializing in classical and contemporary vocal accompaniment for choral performances.</p>
         </div>
         <div class="team-member scroll-reveal">
           <div class="member-photo">
-            <img src="https://images.unsplash.com/photo-1517672712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Administrator" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Administrator" loading="lazy" />
           </div>
-          <h3>Margaret Chen</h3>
-          <div class="member-role">Executive Director</div>
-          <p class="member-bio">Margaret ensures our operations run seamlessly while managing community outreach and donor relations with dedication.</p>
+          <h3>Michael Torres</h3>
+          <div class="member-role">Executive Administrator</div>
+          <p class="member-bio">Dedicated professional managing all operational and logistical aspects of CCCS programming.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== MEMBERSHIP & SUPPORT ===== -->
+    <!-- ===== SUPPORT SECTION ===== -->
     <section class="wrap">
-      <div class="split-section">
-        <div class="card">
-          <div class="section-title">
-            <h2>Support Our Mission</h2>
-          </div>
-          <p>Your generosity directly funds performances, scholarships, outreach concerts, and the development of emerging musicians in Cleveland County.</p>
-          <div class="stats">
-            <div class="stat">
-              <div class="stat-number">$500K</div>
-              <div class="stat-label">Annual Budget</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">$25K</div>
-              <div class="stat-label">Scholarships Given</div>
-            </div>
-          </div>
-          <a href="#contact" class="btn btn-primary" style="display: block; text-align: center; margin-top: 1.5rem;">Make a Donation</a>
+      <div class="card">
+        <div class="section-title">
+          <h2>Support Our Mission</h2>
         </div>
-
-        <div class="card">
-          <div class="section-title">
-            <h2>Membership Tiers</h2>
-          </div>
-          <ul class="tiers">
-            <li class="tier-item">
-              <div>
-                <div class="tier-name">Supporter</div>
-                <div class="tier-description">Monthly updates & concert previews</div>
-              </div>
-              <div class="tier-amount">$5/mo</div>
-              <a href="#contact" class="btn btn-secondary" style="white-space: nowrap;">Join</a>
-            </li>
-            <li class="tier-item">
-              <div>
-                <div class="tier-name">Patron</div>
-                <div class="tier-description">Priority seating + exclusive events</div>
-              </div>
-              <div class="tier-amount">$15/mo</div>
-              <a href="#contact" class="btn btn-secondary" style="white-space: nowrap;">Join</a>
-            </li>
-            <li class="tier-item">
-              <div>
-                <div class="tier-name">Benefactor</div>
-                <div class="tier-description">VIP access + sponsorship recognition</div>
-              </div>
-              <div class="tier-amount">$35/mo</div>
-              <a href="#contact" class="btn btn-secondary" style="white-space: nowrap;">Join</a>
-            </li>
-          </ul>
-        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+          Your generosity directly supports world-class performances, musician scholarships, and community music education. Join us in making beautiful music accessible to everyone.
+        </p>
+        <ul class="tiers">
+          <li class="tier-item scroll-reveal">
+            <div>
+              <div class="tier-name">Friend Tier</div>
+              <div class="tier-description">Perfect for those beginning their support journey</div>
+            </div>
+            <div class="tier-amount">$25</div>
+            <button class="btn btn-outline" onclick="alert('Thank you for your interest!')">Donate</button>
+          </li>
+          <li class="tier-item scroll-reveal">
+            <div>
+              <div class="tier-name">Patron Tier</div>
+              <div class="tier-description">Recognition in our concert programs</div>
+            </div>
+            <div class="tier-amount">$100</div>
+            <button class="btn btn-outline" onclick="alert('Thank you for your interest!')">Donate</button>
+          </li>
+          <li class="tier-item scroll-reveal">
+            <div>
+              <div class="tier-name">Sponsor Tier</div>
+              <div class="tier-description">Exclusive benefits + VIP concert access</div>
+            </div>
+            <div class="tier-amount">$500</div>
+            <button class="btn btn-outline" onclick="alert('Thank you for your interest!')">Donate</button>
+          </li>
+          <li class="tier-item scroll-reveal">
+            <div>
+              <div class="tier-name">Director's Circle</div>
+              <div class="tier-description">Premium recognition + private events + season pass</div>
+            </div>
+            <div class="tier-amount">$1,000+</div>
+            <button class="btn btn-outline" onclick="alert('Thank you for your interest!')">Donate</button>
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="wrap">
-      <div class="donate-section">
-        <h2>Connect With Us</h2>
-        <p>Have questions? Want to join our choir? Ready to support the arts? We'd love to hear from you!</p>
-      </div>
-
-      <div class="form-section" style="margin-top: 2rem;">
-        <div class="card">
-          <form id="contactForm">
+      <div class="card">
+        <div class="section-title">
+          <h2>Get In Touch</h2>
+        </div>
+        <div class="form-section">
+          <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! We\'ll respond within 48 hours.'); this.reset();">
             <div class="form-row">
               <div>
                 <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required />
+                <input type="text" id="name" name="name" required />
               </div>
               <div>
                 <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                <input type="email" id="email" name="email" required />
               </div>
             </div>
-
             <div class="form-row">
               <div>
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
+                <input type="tel" id="phone" name="phone" />
               </div>
               <div>
-                <label for="interest">I'm Interested In *</label>
+                <label for="interest">I'm interested in *</label>
                 <select id="interest" name="interest" required>
                   <option value="">Select an option</option>
-                  <option value="concerts">Attending Concerts</option>
-                  <option value="singing">Singing With the Choir</option>
-                  <option value="volunteering">Volunteering</option>
-                  <option value="sponsorship">Corporate Sponsorship</option>
-                  <option value="donations">Making a Donation</option>
+                  <option value="join">Joining the Choir</option>
+                  <option value="tickets">Concert Tickets</option>
+                  <option value="sponsor">Sponsorship</option>
                   <option value="other">Other</option>
                 </select>
               </div>
             </div>
-
             <div>
               <label for="message">Message *</label>
-              <textarea id="message" name="message" placeholder="Tell us more..." required></textarea>
+              <textarea id="message" name="message" required></textarea>
             </div>
-
             <button type="submit" class="submit-btn">Send Message</button>
-            <p style="text-align: center; font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">
-              We'll respond within 24 hours. You can also reach us at <strong>info@clevelandcountychoralsociety.org</strong>
-            </p>
           </form>
         </div>
       </div>
@@ -1149,80 +1379,49 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="wrap">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Cleveland County Choral Society</h3>
-          <p>Enriching lives through the transformative power of choral music since 1994.</p>
-          <div class="social-links">
-            <a href="https://facebook.com" class="social-icon" title="Facebook">f</a>
-            <a href="https://instagram.com" class="social-icon" title="Instagram">📷</a>
-            <a href="https://youtube.com" class="social-icon" title="YouTube">▶</a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h3>Quick Links</h3>
-          <a href="#events">Upcoming Events</a>
-          <a href="#team">Our Team</a>
-          <a href="#contact">Contact Us</a>
-          <a href="#about">About CCCS</a>
-        </div>
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p>📍 Shelby, North Carolina</p>
-          <p>📧 info@clevelandcountychoralsociety.org</p>
-          <p>📞 (704) 555-CCCS</p>
-        </div>
-        <div class="footer-section">
-          <h3>Performance Venues</h3>
-          <p>First Baptist Church</p>
-          <p>CCC Arts Center</p>
-          <p>Keeter Auditorium</p>
-          <p>Cleveland Community College</p>
+  <footer class="wrap">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About CCCS</h3>
+        <p>The Cleveland County Choral Society is North Carolina's premier community choir, dedicated to enriching lives through beautiful choral music.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="#about">About Us</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="#" class="social-icon" title="Facebook">f</a>
+          <a href="#" class="social-icon" title="Instagram">📷</a>
+          <a href="#" class="social-icon" title="YouTube">▶</a>
+          <a href="#" class="social-icon" title="Twitter">𝕏</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 Cleveland County Choral Society. All rights reserved. | Design crafted to inspire</p>
+      <div class="footer-section">
+        <h3>Location</h3>
+        <p>Shelby, NC 28150</p>
+        <p>Phone: (704) 555-0147</p>
+        <p>Email: info@cccs.org</p>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cleveland County Choral Society. All rights reserved. Made with ♪ for music lovers.</p>
     </div>
   </footer>
 
+  <!-- ===== SCROLL REVEAL ANIMATION ===== -->
   <script>
-    // Form submission handler
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const formData = new FormData(this);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        phone: formData.get('phone'),
-        interest: formData.get('interest'),
-        message: formData.get('message'),
-        timestamp: new Date().toISOString()
-      };
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-      // Store in localStorage as demo (in production, send to backend)
-      const submissions = JSON.parse(localStorage.getItem('cccs_submissions') || '[]');
-      submissions.push(data);
-      localStorage.setItem('cccs_submissions', JSON.stringify(submissions));
-
-      // Visual feedback
-      const btn = this.querySelector('.submit-btn');
-      const originalText = btn.textContent;
-      btn.textContent = '✓ Message Sent!';
-      btn.style.background = 'linear-gradient(135deg, #059669, #047857)';
-      
-      setTimeout(() => {
-        this.reset();
-        btn.textContent = originalText;
-        btn.style.background = '';
-      }, 3000);
-    });
-
-    // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.scroll-reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1230,19 +1429,11 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, observerOptions);
 
-    revealElements.forEach(el => observer.observe(el));
-
-    // Smooth section navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && document.querySelector(href)) {
-          e.preventDefault();
-          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+    // Observe all scroll-reveal elements
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
     });
   </script>
 </body>
