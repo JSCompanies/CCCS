@@ -1,2 +1,2 @@
 # CCCS
-Home of Cleveland County Choral Society
+Cleveland County Choral Society's Homepage
